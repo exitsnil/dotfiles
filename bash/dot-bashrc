@@ -48,6 +48,7 @@ alias grep='grep --color=auto'
 source /usr/share/bash-completion/completions/git
 source /home/adam/.local/share/bash-completion/completions/deno.bash
 source /home/adam/.local/share/bash-completion/completions/poetry.bash
+source /home/adam/.local/share/bash-completion/completions/kiro.bash
 
 # perl stuff
 PERL5LIB="/home/adam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
