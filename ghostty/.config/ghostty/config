@@ -6,5 +6,5 @@ cursor-style = block
 cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
-theme = tokyonight_night
+theme = TokyoNight Night
 keybind = shift+enter=text:\n
