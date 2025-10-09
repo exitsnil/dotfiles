@@ -45,10 +45,16 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # initialize bash completions
-source /usr/share/bash-completion/completions/git
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  source /usr/share/bash-completion/completions/git
+fi
+
 source ~/.local/share/bash-completion/completions/deno.bash
 source ~/.local/share/bash-completion/completions/poetry.bash
-source ~/.local/share/bash-completion/completions/kiro.bash
+
+if [ -f "~/.local/share/bash-completion/completions/kiro.bash" ]; then
+  source ~/.local/share/bash-completion/completions/kiro.bash
+fi
 
 # perl stuff
 PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
