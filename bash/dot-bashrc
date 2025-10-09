@@ -46,13 +46,15 @@ alias grep='grep --color=auto'
 
 # initialize bash completions
 source /usr/share/bash-completion/completions/git
-source /home/adam/.local/share/bash-completion/completions/deno.bash
-source /home/adam/.local/share/bash-completion/completions/poetry.bash
-source /home/adam/.local/share/bash-completion/completions/kiro.bash
+source ~/.local/share/bash-completion/completions/deno.bash
+source ~/.local/share/bash-completion/completions/poetry.bash
+source ~/.local/share/bash-completion/completions/kiro.bash
 
 # perl stuff
-PERL5LIB="/home/adam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/adam/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/adam/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/adam/perl5"; export PERL_MM_OPT;
+PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="~/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
