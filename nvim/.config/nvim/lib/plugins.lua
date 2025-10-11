@@ -50,7 +50,6 @@ lazy.setup({
 		require("plugins.claude-code"),
 		require("plugins.vim-rails"),
     require("plugins.zig-vim"),
-    require("plugins.tokyonight-nvim"),
-    require("plugins.tokyodark-nvim")
+    require("plugins.alabaster-nvim")
 	},
 })
