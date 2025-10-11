@@ -5,5 +5,5 @@ cursor-style = block
 cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
-theme = Cursor Dark
+theme = Alabaster
 keybind = shift+enter=text:\n
