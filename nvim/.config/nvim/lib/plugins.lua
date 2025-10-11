@@ -50,6 +50,6 @@ lazy.setup({
 		require("plugins.claude-code"),
 		require("plugins.vim-rails"),
     require("plugins.zig-vim"),
-    require("plugins.alabaster-nvim")
+    require("plugins.cursor-dark-anysphere-nvim")
 	},
 })
