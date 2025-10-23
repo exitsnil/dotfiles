@@ -18,23 +18,8 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
--- set background to terminal background color
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
--- set visual select background to grey
--- vim.cmd("highlight Visual cterm=NONE gui=NONE ctermbg=7 guibg=#d3d3d3")
--- -- set visual select foreground to black
--- vim.cmd("highlight Visual cterm=NONE gui=NONE ctermfg=0 guifg=#000000")
--- -- set matchparen background to grey
--- vim.cmd("highlight MatchParen cterm=NONE gui=NONE ctermbg=7 guibg=#d3d3d3")
--- -- set matchparen foreground to black
--- vim.cmd("highlight MatchParen cterm=NONE gui=NONE ctermfg=0 guifg=#000000")
--- -- set search background to grey
--- vim.cmd("highlight Search cterm=NONE gui=NONE ctermbg=7 guibg=#d3d3d3")
--- -- set search foreground to black
--- vim.cmd("highlight Search cterm=NONE gui=NONE ctermfg=0 guifg=#000000")
--- -- set search background and foreground
--- vim.cmd("highlight IncSearch cterm=NONE gui=NONE ctermbg=7 guibg=#d3d3d3")
--- vim.cmd("highlight IncSearch cterm=NONE gui=NONE ctermfg=0 guifg=#000000")
+vim.cmd("highlight NormalFloat guibg=#1c1c1c guifg=white")
 
 -- primarily used for navigating through kernel source tree
 vim.opt.tags = "./tags;,tags"
