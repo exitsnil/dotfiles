@@ -48,7 +48,7 @@ lazy.setup({
 		require("plugins.nvim-dap"),
 		require("plugins.vim-rails"),
     require("plugins.zig-vim"),
-    require("plugins.cursor-dark-anysphere-nvim"),
-    require("plugins.gitsigns-nvim")
+    require("plugins.gitsigns-nvim"),
+    require("plugins.kanso-nvim")
 	},
 })
