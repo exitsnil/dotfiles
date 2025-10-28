@@ -6,4 +6,4 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
-theme = Builtin Solarized Dark
+theme = TokyoNight Night
