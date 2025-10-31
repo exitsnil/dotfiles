@@ -6,4 +6,5 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
-theme = TokyoNight Night
+# theme = TokyoNight Night
+theme = Cursor Dark
