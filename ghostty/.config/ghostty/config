@@ -1,4 +1,3 @@
-font-size = 10
 shell-integration = bash
 shell-integration-features = no-cursor,title,sudo
 cursor-style = block
@@ -8,3 +7,4 @@ link-url = true
 keybind = shift+enter=text:\n
 # theme = TokyoNight Night
 theme = Cursor Dark
+font-family = Monaco
