@@ -45,9 +45,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # initialize bash completions
-if [ -f "/usr/share/bash-completion/completions/git" ]; then
-  source /usr/share/bash-completion/completions/git
-fi
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 source ~/.local/share/bash-completion/completions/deno.bash
 source ~/.local/share/bash-completion/completions/poetry.bash
