@@ -7,4 +7,4 @@ link-url = true
 keybind = shift+enter=text:\n
 # theme = TokyoNight Night
 theme = Cursor Dark
-font-family = Monaco
+font-family = SF Mono
