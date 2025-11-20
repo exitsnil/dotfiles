@@ -49,6 +49,6 @@ lazy.setup({
 		require("plugins.vim-rails"),
     require("plugins.zig-vim"),
     require("plugins.gitsigns-nvim"),
-    require("plugins.tokyonight")
+    require("plugins.vim-colors-xcode")
 	},
 })
