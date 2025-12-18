@@ -5,5 +5,5 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
-theme = Apple System Colors Light
+theme = iTerm2 Default
 font-family = SF Mono
