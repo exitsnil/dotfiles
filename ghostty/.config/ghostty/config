@@ -5,4 +5,4 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
-theme = iTerm2 Default
+theme = TokyoNight Night
