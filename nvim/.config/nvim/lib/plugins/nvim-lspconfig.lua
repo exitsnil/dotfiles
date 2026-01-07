@@ -16,62 +16,73 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local util = require("lspconfig/util")
 
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-		lspconfig["yamlls"].setup({
+		vim.lsp.config("yamlls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "yamlls" })
 
-		lspconfig["cssls"].setup({
+		vim.lsp.config("cssls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "cssls" })
 
-		lspconfig["dockerls"].setup({
+		vim.lsp.config("dockerls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "dockerls" })
 
-		lspconfig["graphql"].setup({
+		vim.lsp.config("graphql", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "graphql" })
 
-		lspconfig["html"].setup({
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "html" })
 
-		lspconfig["jsonls"].setup({
+		vim.lsp.config("jsonls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "jsonls" })
 
-		lspconfig["ruby_lsp"].setup({
+		vim.lsp.config("ruby_lsp", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "ruby_lsp" })
 
-		lspconfig["sqlls"].setup({
+		vim.lsp.config("sqlls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "sqlls" })
 
-		lspconfig["pyright"].setup({
+		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "pyright" })
 
-		lspconfig["hls"].setup({
+		vim.lsp.config("hls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "hls" })
 
-		lspconfig["ocamllsp"].setup({
+		vim.lsp.config("ocamllsp", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "ocamllsp" })
 
-		lspconfig["ccls"].setup({
+		vim.lsp.config("ccls", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "ccls" })
 
-		lspconfig["gopls"].setup({
+		vim.lsp.config("gopls", {
 			cmd = { "gopls", "serve" },
 			filetypes = { "go", "gomod" },
 			root_dir = util.root_pattern("go.work", "go.mod", ".git"),
@@ -84,16 +95,18 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable({ "gopls" })
 
 		-- have to tell nvim where elixirls is located, not stored in project by default
 		-- https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#elixirls
-		lspconfig["elixirls"].setup({
+		vim.lsp.config("elixirls", {
 			cmd = { "/opt/homebrew/bin/elixir-ls" },
 			capabilities = capabilities,
 			on_attach = function(client)
 				client.server_capabilities.semanticTokensProvider = nil
 			end,
 		})
+		vim.lsp.enable({ "elixirls" })
 
 		local buf_map = function(bufnr, mode, lhs, rhs, opts)
 			vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, opts or {
@@ -103,7 +116,7 @@ return {
 
 		-- need to install tsserver and typescript-language-server globally
 		-- bun install -g tsserver typescript-language-server
-		lspconfig["ts_ls"].setup({
+		vim.lsp.config("ts_ls", {
 			on_attach = function(client, bufnr)
 				client.resolved_capabilities.document_formatting = false
 				client.resolved_capabilities.document_range_formatting = false
@@ -117,12 +130,14 @@ return {
 			end,
 			root_dir = util.root_pattern("package.json"),
 		})
+		vim.lsp.enable({ "ts_ls" })
 
-		lspconfig["rust_analyzer"].setup({
+		vim.lsp.config("rust_analyzer", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "rust_analyzer" })
 
-		lspconfig["lua_ls"].setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = function(client)
 				client.server_capabilities.semanticTokensProvider = nil
@@ -135,24 +150,29 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable({ "lua_ls" })
 
-		lspconfig["teal_ls"].setup({
-			-- capabilities = capabilities,
+		vim.lsp.config("teal_ls", {
+			capabilities = capabilities,
 			-- on_attach = function(client)
 			-- 	client.server_capabilities.semanticTokensProvider = nil
 			-- end,
 		})
+		vim.lsp.enable({ "teal_ls" })
 
-		lspconfig["prismals"].setup({
+		vim.lsp.config("prismals", {
 			capabilities = capabilities,
 		})
+		vim.lsp.enable({ "prismals" })
 
-    lspconfig["kotlin_lsp"].setup({
-      capabilities = capabilities,
-    })
+		vim.lsp.config("kotlin_lsp", {
+			capabilities = capabilities,
+		})
+		vim.lsp.enable({ "kotlin_lsp" })
 
-    lspconfig["zls"].setup({
-      capabilities = capabilities,
-    })
+		vim.lsp.config("zls", {
+			capabilities = capabilities,
+		})
+		vim.lsp.enable({ "zls" })
 	end,
 }
