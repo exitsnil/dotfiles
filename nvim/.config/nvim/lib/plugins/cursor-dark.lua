@@ -1,3 +1,3 @@
 return {
-  "ydkulks/cursor-dark.nvim"
+  "bergholmm/cursor-dark.nvim"
 }
