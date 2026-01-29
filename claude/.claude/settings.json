@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); cwd=$(echo \"$input\" | jq -r '.workspace.current_dir'); user=$(whoami); host=$(hostname -s); printf \"\\033[2m\\033[0;32m%s\\033[0m@\\033[0;34m%s\\033[0m %s\" \"$user\" \"$host\" \"$cwd\";"
+  }
+}
