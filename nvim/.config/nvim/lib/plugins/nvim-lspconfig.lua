@@ -8,7 +8,7 @@
 -- tsserver (typescript-language-server)
 -- rust_analyzer
 -- vscode-langservers-extracted
--- ccls
+-- clangd
 
 return {
 	"neovim/nvim-lspconfig",
@@ -77,10 +77,10 @@ return {
 		})
 		vim.lsp.enable({ "ocamllsp" })
 
-		vim.lsp.config("ccls", {
+		vim.lsp.config("clangd", {
 			capabilities = capabilities,
 		})
-		vim.lsp.enable({ "ccls" })
+		vim.lsp.enable({ "clangd" })
 
 		vim.lsp.config("gopls", {
 			cmd = { "gopls", "serve" },
