@@ -5,6 +5,7 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
+font-family = SF Mono
 
 palette = 0=#1F1F1F
 palette = 1=#F44747
