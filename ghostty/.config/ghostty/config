@@ -6,4 +6,6 @@ mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
 font-family = Menlo
+# theme = iTerm2 Default
+theme = Tomorrow Night
 background = #121212

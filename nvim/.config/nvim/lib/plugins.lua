@@ -50,6 +50,6 @@ lazy.setup({
     require("plugins.zig-vim"),
     require("plugins.gitsigns-nvim"),
     require("plugins.vim-dadbod"),
-    require("plugins.jellybeans-nvim")
+    require("plugins.tairiki-nvim")
 	},
 })
