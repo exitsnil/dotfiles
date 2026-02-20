@@ -1,0 +1,3 @@
+return {
+  "WTFox/jellybeans.nvim"
+}
