@@ -174,5 +174,8 @@ return {
 			capabilities = capabilities,
 		})
 		vim.lsp.enable({ "zls" })
+
+    vim.lsp.config("metals", { capabilities = capabilities })
+    vim.lsp.enable({ "metals" })
 	end,
 }
