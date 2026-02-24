@@ -19,7 +19,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NormalFloat guibg=#1c1c1c guifg=white")
+vim.cmd("highlight NormalFloat guibg=#1c1c1c")
 
 -- primarily used for navigating through kernel source tree
 vim.opt.tags = "./tags;,tags"
