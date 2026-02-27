@@ -3,7 +3,7 @@ export LANG=en_US.UTF-8
 export PLAN9="/usr/local/plan9"
 export WASMTIME_HOME="$HOME/.wasmtime"
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.local/share/coursier/bin:$HOME/go/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.luarocks/bin:$HOME/perl5/bin:$BUN_INSTALL/bin:$HOME/opt/kotlinc/bin:$HOME/opt/zig:$HOME/.opencode/bin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@18/bin:/opt/homebrew/opt/openjdk/bin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PLAN9/bin:$WASMTIME_HOME/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.local/share/coursier/bin:$HOME/go/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.luarocks/bin:$HOME/perl5/bin:$BUN_INSTALL/bin:$HOME/opt/kotlinc/bin:$HOME/opt/zig:$HOME/.opencode/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@18/bin:/opt/homebrew/opt/openjdk/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PLAN9/bin:$WASMTIME_HOME/bin"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 export STM32CubeMX_PATH=$HOME/opt/st/STM32CubeMX
 
@@ -11,8 +11,8 @@ export STM32CubeMX_PATH=$HOME/opt/st/STM32CubeMX
 # export JAVA_TOOL_OPTIONS="-Dsun.java2d.uiScale=2.0"
 
 # lua
-export LUA_PATH='/usr/local/share/lua/5.4/?.lua;/usr/local/share/lua/5.4/?/init.lua;/usr/local/lib/lua/5.4/?.lua;/usr/local/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;$HOME/.luarocks/share/lua/5.4/?.lua;$HOME/.luarocks/share/lua/5.4/?/init.lua'
-export LUA_CPATH='/usr/local/lib/lua/5.4/?.so;/usr/local/lib/lua/5.4/loadall.so;./?.so;$HOME/.luarocks/lib/lua/5.4/?.so'
+export LUA_PATH='/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;$HOME/.luarocks/share/lua/5.5/?.lua;$HOME/.luarocks/share/lua/5.5/?/init.lua'
+export LUA_CPATH='/usr/local/lib/lua/5.5/?.so;/usr/local/lib/lua/5.5/loadall.so;./?.so;$HOME/.luarocks/lib/lua/5.5/?.so'
 
 # use Adwaita-dark for GTK and Qt applications if possible
 # export GTK_THEME="Adwaita:dark"
