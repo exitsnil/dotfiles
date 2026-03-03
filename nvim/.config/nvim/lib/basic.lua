@@ -13,8 +13,8 @@ vim.opt.smartindent = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.signcolumn = "no"
 vim.opt.nu = true
-vim.cmd("colorscheme kanagawa-dragon")
 vim.opt.termguicolors = true
+vim.cmd("colorscheme tokyonight-night")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
