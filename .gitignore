@@ -45,3 +45,8 @@ claude/.claude/*
 !claude/.claude/settings.json
 
 zed/.config/zed/themes/
+
+
+# opencode config
+opencode/.config/opencode/*
+!opencode/.config/opencode/opencode.json
