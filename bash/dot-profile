@@ -10,9 +10,8 @@ export STM32CubeMX_PATH=$HOME/opt/st/STM32CubeMX
 # some STM tools use Java's GUI toolkit and need this for HiDPI displays
 # export JAVA_TOOL_OPTIONS="-Dsun.java2d.uiScale=2.0"
 
-# lua
-export LUA_PATH='/usr/local/share/lua/5.5/?.lua;/usr/local/share/lua/5.5/?/init.lua;/usr/local/lib/lua/5.5/?.lua;/usr/local/lib/lua/5.5/?/init.lua;./?.lua;./?/init.lua;$HOME/.luarocks/share/lua/5.5/?.lua;$HOME/.luarocks/share/lua/5.5/?/init.lua'
-export LUA_CPATH='/usr/local/lib/lua/5.5/?.so;/usr/local/lib/lua/5.5/loadall.so;./?.so;$HOME/.luarocks/lib/lua/5.5/?.so'
+# lua/luarocks
+eval "$(luarocks path --no-bin)"
 
 # use Adwaita-dark for GTK and Qt applications if possible
 # export GTK_THEME="Adwaita:dark"
