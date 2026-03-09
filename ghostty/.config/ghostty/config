@@ -5,7 +5,7 @@ cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
-font-family = Menlo
+# font-family = Menlo
 theme = TokyoNight Night
 
 # kanagawa dragon
