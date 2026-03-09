@@ -14,7 +14,7 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.signcolumn = "no"
 vim.opt.nu = true
 vim.opt.termguicolors = true
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme tairiki")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 

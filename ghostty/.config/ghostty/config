@@ -6,7 +6,7 @@ mouse-hide-while-typing = true
 link-url = true
 keybind = shift+enter=text:\n
 # font-family = Menlo
-theme = TokyoNight Night
+theme = Tomorrow
 
 # kanagawa dragon
 # palette = 0=#0d0c0c
