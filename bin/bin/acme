@@ -14,3 +14,4 @@ while ! 9p ls acme >/dev/null 2>&1; do
 done
 
 pgrep -x acme-lsp >/dev/null || acme-lsp &
+pgrep -f "sh $HOME/bin/Adefaults" >/dev/null || "$HOME/bin/Adefaults" &

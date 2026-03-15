@@ -1,0 +1,22 @@
+#!/bin/sh
+# Adefaults - add default tag commands to new acme windows
+
+9p read acme/log | while read id op name; do
+    case "$op" in
+    new|get)
+        case "$name" in
+        *.rs|*.c|*.h|*.cpp|*.hpp|*.cc|*.cxx)
+			# read the current tag to see if there is a space at the end of it
+			tag=$(9p read "acme/$id/tag")
+
+			case "$tag" in
+				*" ") prefix="" ;;
+				*) prefix=" " ;;
+			esac
+
+            echo "${prefix}Ldef Lrefs Lfmt Lhov Lcomp" | 9p write "acme/$id/tag"
+            ;;
+        esac
+        ;;
+    esac
+done
