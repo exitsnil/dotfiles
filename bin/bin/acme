@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PLAN9="/usr/local/plan9"
+
+pgrep -x fontsrv >/dev/null || "$PLAN9/bin/fontsrv" &
+pgrep -x plumber >/dev/null || "$PLAN9/bin/plumber" &
+exec "$PLAN9/bin/acme" -f /mnt/font/JetBrainsMono-Regular/13a/font "$@" &
+
+n=0
+while ! 9p ls acme >/dev/null 2>&1; do
+    sleep 0.1
+    n=$((n + 1))
+    [ "$n" -ge 50 ] && echo "Timed out waiting for acme" && exit 1
+done
+
+pgrep -x acme-lsp >/dev/null || acme-lsp &
