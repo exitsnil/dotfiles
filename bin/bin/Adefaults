@@ -5,7 +5,7 @@
     case "$op" in
     new|get)
         case "$name" in
-        *.rs|*.c|*.h|*.cpp|*.hpp|*.cc|*.cxx)
+        *.rs|*.c|*.h|*.cpp|*.hpp|*.cc|*.cxx|*.rb|*.js|*.jsx|*.ts|*.tsx|*.py|*.lua)
 			# read the current tag to see if there is a space at the end of it
 			tag=$(9p read "acme/$id/tag")
 
