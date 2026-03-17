@@ -1,10 +1,12 @@
 #!/bin/sh
 
 PLAN9="/usr/local/plan9"
+GOPATH="/Users/adam/go"
 
 pgrep -x fontsrv >/dev/null || "$PLAN9/bin/fontsrv" &
 pgrep -x plumber >/dev/null || "$PLAN9/bin/plumber" &
-exec "$PLAN9/bin/acme" -f /mnt/font/JetBrainsMono-Regular/13a/font "$@" &
+# exec "$PLAN9/bin/acme" -f /mnt/font/JetBrainsMono-Regular/13a/font "$@" &
+exec "$GOPATH/bin/edwood" -f /mnt/font/JetBrainsMono-Regular/13a/font "$@" &
 
 n=0
 while ! 9p ls acme >/dev/null 2>&1; do
