@@ -52,6 +52,7 @@ lazy.setup({
     require("plugins.vim-dadbod"),
     require("plugins.tairiki-nvim"),
     require("plugins.kanagawa-nvim"),
-    require("plugins.tokyonight-nvim")
+    require("plugins.tokyonight-nvim"),
+    require("plugins.jb-nvim")
 	},
 })

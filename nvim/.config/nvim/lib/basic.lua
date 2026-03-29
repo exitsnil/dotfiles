@@ -14,12 +14,12 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.signcolumn = "no"
 vim.opt.nu = true
 vim.opt.termguicolors = true
-vim.cmd("colorscheme tairiki")
+vim.cmd("colorscheme jb")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
-vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NormalFloat guibg=#1c1c1c")
+-- vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+-- vim.cmd("highlight NormalFloat guibg=#1c1c1c")
 
 -- primarily used for navigating through kernel source tree
 vim.opt.tags = "./tags;,tags"

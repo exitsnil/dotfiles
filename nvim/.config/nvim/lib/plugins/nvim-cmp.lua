@@ -7,16 +7,14 @@ return {
 		local cmp = require("cmp")
 
 		cmp.setup({
-			window = {
-				completion = {
-					winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-					col_offset = -3,
-					side_padding = 0,
-				},
-				documentation = {
-					winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-				},
-			},
+      window = {
+        completion = cmp.config.window.bordered({
+          winhighlight = "Normal:Pmenu,FloatBorder:DialogFloatBorder,CursorLine:PmenuSel,Search:None",
+        }),
+        documentation = cmp.config.window.bordered({
+          winhighlight = "Normal:Pmenu,FloatBorder:DialogFloatBorder,CursorLine:PmenuSel,Search:None",
+        }),
+      },
 			snippet = {
 				expand = function(args)
 					local luasnip = require("luasnip")

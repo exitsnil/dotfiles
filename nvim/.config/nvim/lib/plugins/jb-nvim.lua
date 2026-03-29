@@ -1,0 +1,3 @@
+return {
+  "nickkadutskyi/jb.nvim"
+}
