@@ -2,8 +2,9 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 export LANG=en_US.UTF-8
 export PLAN9="/usr/local/plan9"
 export WASMTIME_HOME="$HOME/.wasmtime"
+export JAVA_HOME="$HOME/Library/Java/JavaVirtualMachines/jdk-26.jdk/Contents/Home"
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/Library/Application Support/Coursier/bin:$HOME/go/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.luarocks/bin:$HOME/perl5/bin:$HOME/.lmstudio/bin:$BUN_INSTALL/bin:$HOME/opt/kotlinc/bin:$HOME/opt/zig:$HOME/.opencode/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@18/bin:/opt/homebrew/opt/openjdk/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PLAN9/bin:$WASMTIME_HOME/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/Library/Application Support/Coursier/bin:$HOME/go/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$HOME/.luarocks/bin:$HOME/perl5/bin:$HOME/.lmstudio/bin:$BUN_INSTALL/bin:$HOME/opt/kotlinc/bin:$HOME/opt/zig:$HOME/.opencode/bin:$JAVA_HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@18/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PLAN9/bin:$WASMTIME_HOME/bin"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 export STM32CubeMX_PATH=$HOME/opt/st/STM32CubeMX
 
