@@ -42,13 +42,13 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (setq make-backup-files nil)
-(set-frame-font "Consolas 11" nil t)
-(set-face-attribute 'default nil :family "Consolas")
-(set-face-attribute 'variable-pitch nil :family "Noto Sans")
+(set-frame-font "JetBrains Mono 12" nil t)
+(set-face-attribute 'default nil :family "JetBrains Mono")
+(set-face-attribute 'variable-pitch nil :family "JetBrains Mono")
 ;; (global-font-lock-mode 0)
 (setq-default truncate-lines t)
 (setq resize-mini-windows nil)
-(load-theme 'modus-vivendi :no-confirm)
+(load-theme 'modus-operandi :no-confirm)
 
 ;; evil-mode
 ;; (evil-mode)
