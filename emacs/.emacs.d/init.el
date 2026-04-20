@@ -48,6 +48,8 @@
 ;; (global-font-lock-mode 0)
 (setq-default truncate-lines t)
 (setq resize-mini-windows nil)
+(setq eldoc-echo-area-use-multiline-p t)
+;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
 (load-theme 'modus-operandi :no-confirm)
 (pixel-scroll-precision-mode 1)
 (setq mac-option-modifier 'meta
@@ -104,6 +106,8 @@
 (add-hook 'ts-mode-hook 'eglot-ensure)
 ;; scala
 (add-hook 'scala-mode-hook 'eglot-ensure)
+;; java
+(add-hook 'java-mode-hook 'eglot-ensure)
 
 ;; notmuch
 ;; (require 'notmuch)
