@@ -42,13 +42,16 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (setq make-backup-files nil)
-(set-frame-font "JetBrains Mono 12" nil t)
+(set-frame-font "JetBrains Mono 13" nil t)
 (set-face-attribute 'default nil :family "JetBrains Mono")
 (set-face-attribute 'variable-pitch nil :family "JetBrains Mono")
 ;; (global-font-lock-mode 0)
 (setq-default truncate-lines t)
 (setq resize-mini-windows nil)
 (load-theme 'modus-operandi :no-confirm)
+(pixel-scroll-precision-mode 1)
+(setq mac-option-modifier 'meta
+      mac-command-modifier 'super)
 
 ;; evil-mode
 ;; (evil-mode)
