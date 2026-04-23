@@ -17,6 +17,10 @@
 
 ;; package list
 ;; (straight-use-package 'evil)
+(straight-use-package 'lsp-mode)
+(straight-use-package 'lsp-ui)
+(straight-use-package 'lsp-java)
+(straight-use-package 'lsp-metals)
 (straight-use-package 'ivy)
 (straight-use-package 'dash)
 (straight-use-package 'cider)
@@ -39,7 +43,7 @@
 (setq auto-save-default nil)
 
 ;; GUI stuff
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (tool-bar-mode -1)
 (setq make-backup-files nil)
 (set-frame-font "JetBrains Mono 13" nil t)
@@ -60,6 +64,22 @@
 
 ;; org-mode
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
+
+;; lsp-mode
+(require 'lsp-mode)
+(setq gc-cons-threshold (* 100 1024 1024)) ;; 100MB
+(setq read-process-output-max (* 1024 1024)) ;; 1MB
+
+;; lsp-ui
+(require 'lsp-ui)
+(setq lsp-ui-doc-use-childframe t)
+(setq lsp-ui-doc-position 'at-point)
+(setq lsp-ui-doc-show-with-cursor t)
+(setq lsp-ui-doc-show-with-mouse nil)
+
+;; lsp-mode packages
+(require 'lsp-java)
+(require 'lsp-metals)
 
 ;; doom-modeline
 (require 'doom-modeline)
@@ -92,22 +112,22 @@
 
 ;; ensure eglot connects to LSP servers
 ;; go
-(add-hook 'go-mode-hook 'eglot-ensure) ; gopls
+(add-hook 'go-mode-hook #'lsp) ; gopls
 ;; clojure
-(add-hook 'clojure-mode-hook 'eglot-ensure) ; clojure-lsp
+(add-hook 'clojure-mode-hook #'lsp) ; clojure-lsp
 ;; c
-(add-hook 'c-mode-hook 'eglot-ensure) ; clangd
+(add-hook 'c-mode-hook #'lsp) ; clangd
 ;; cpp
-(add-hook 'c++-mode-hook 'eglot-ensure) ; clangd
+(add-hook 'c++-mode-hook #'lsp) ; clangd
 ;; javascript
-(add-hook 'js-mode-hook 'eglot-ensure) ; typescript-language-server
+(add-hook 'js-mode-hook #'lsp) ; typescript-language-server
 ;; typescript
-(add-hook 'typescript-mode-hook 'eglot-ensure) ; typescript-language-server
-(add-hook 'ts-mode-hook 'eglot-ensure)
+(add-hook 'typescript-mode-hook #'lsp) ; typescript-language-server
+(add-hook 'ts-mode-hook #'lsp)
 ;; scala
-(add-hook 'scala-mode-hook 'eglot-ensure)
+(add-hook 'scala-mode-hook #'lsp)
 ;; java
-(add-hook 'java-mode-hook 'eglot-ensure)
+(add-hook 'java-mode-hook #'lsp)
 
 ;; notmuch
 ;; (require 'notmuch)
