@@ -76,6 +76,7 @@
 (setq lsp-ui-doc-position 'at-point)
 (setq lsp-ui-doc-show-with-cursor t)
 (setq lsp-ui-doc-show-with-mouse nil)
+;; todo: need to make hovertext window thingy not look bad
 
 ;; lsp-mode packages
 (require 'lsp-java)
