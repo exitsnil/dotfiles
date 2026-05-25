@@ -42,6 +42,7 @@ alias grep='grep --color=auto'
 
 # initialize bash completions
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+[[ -r "$HOME/.grok/completions/bash/grok.bash" ]] && source "$HOME/.grok/completions/bash/grok.bash"
 
 source ~/.local/share/bash-completion/completions/deno.bash
 source ~/.local/share/bash-completion/completions/poetry.bash
