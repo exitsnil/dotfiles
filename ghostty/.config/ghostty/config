@@ -6,3 +6,4 @@ mouse-hide-while-typing = true
 link-url = true
 font-family = Consolas
 font-size = 14
+theme = TokyoNight
