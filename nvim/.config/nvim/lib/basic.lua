@@ -14,7 +14,7 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.signcolumn = "no"
 vim.opt.nu = true
 vim.opt.termguicolors = true
-vim.cmd("colorscheme jb")
+vim.cmd("colorscheme vscode")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 

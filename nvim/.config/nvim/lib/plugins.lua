@@ -47,12 +47,9 @@ lazy.setup({
 		require("plugins.todo-comments-nvim"),
 		require("plugins.nvim-dap"),
 		require("plugins.vim-rails"),
-    require("plugins.zig-vim"),
-    require("plugins.gitsigns-nvim"),
-    require("plugins.vim-dadbod"),
-    require("plugins.tairiki-nvim"),
-    require("plugins.kanagawa-nvim"),
-    require("plugins.tokyonight-nvim"),
-    require("plugins.jb-nvim")
+		require("plugins.zig-vim"),
+		require("plugins.gitsigns-nvim"),
+		require("plugins.vim-dadbod"),
+		require("plugins.vscode"),
 	},
 })
