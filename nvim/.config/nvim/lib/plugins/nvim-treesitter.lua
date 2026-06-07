@@ -40,6 +40,7 @@
 -- TSInstall python
 -- TSInstall ruby
 -- TSInstall rust
+-- TSInstall scala
 -- TSInstall scheme
 -- TSInstall sql
 -- TSInstall ssh_config
@@ -97,6 +98,7 @@ return {
 			"python",
 			"ruby",
 			"rust",
+      "scala",
 			"scheme",
 			"sql",
 			"ssh_config",
