@@ -52,11 +52,10 @@
 
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
 	build = ":TSUpdate",
-	-- main = "nvim-treesitter.configs",
-	opts = {
-		ensure_installed = {
+  config = function()
+    local nvim_treesitter = require("nvim-treesitter")
+    nvim_treesitter.install({
 			"asm",
 			"awk",
 			"bash",
@@ -107,13 +106,73 @@ return {
 			"typescript",
 			"vim",
 			"yaml",
-		},
-		sync_install = false,
-		highlight = {
-			enable = true,
-		},
-		indent = {
-			enable = true,
-		},
-	},
+    })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function(args)
+        pcall(vim.treesitter.start, args.buf)
+      end
+    })
+  end
+	-- opts = {
+	-- 	ensure_installed = {
+	-- 		"asm",
+	-- 		"awk",
+	-- 		"bash",
+	-- 		"c",
+	-- 		"cmake",
+	-- 		"commonlisp",
+	-- 		"cpp",
+	-- 		"csv",
+	-- 		"cuda",
+	-- 		"elixir",
+	-- 		"git_config",
+	-- 		"git_rebase",
+	-- 		"gitattributes",
+	-- 		"gitcommit",
+	-- 		"gitignore",
+	-- 		"glsl",
+	-- 		"go",
+	-- 		"gomod",
+	-- 		"gowork",
+	-- 		"gpg",
+	-- 		"graphql",
+	-- 		"html",
+	-- 		"http",
+	-- 		"javascript",
+	-- 		"jq",
+	-- 		"jsdoc",
+	-- 		"json",
+	-- 		"llvm",
+	-- 		"lua",
+	-- 		"luadoc",
+	-- 		"m68k",
+	-- 		"make",
+	-- 		"markdown",
+	-- 		"meson",
+	-- 		"nasm",
+	-- 		"ninja",
+	-- 		"objc",
+	-- 		"ocaml",
+	-- 		"python",
+	-- 		"ruby",
+	-- 		"rust",
+      -- "scala",
+	-- 		"scheme",
+	-- 		"sql",
+	-- 		"ssh_config",
+	-- 		"strace",
+	-- 		"tsx",
+	-- 		"typescript",
+	-- 		"vim",
+	-- 		"yaml",
+	-- 	},
+	-- 	sync_install = false,
+	-- 	highlight = {
+	-- 		enable = true,
+	-- 	},
+	-- 	indent = {
+	-- 		enable = true,
+	-- 	},
+	-- },
 }
