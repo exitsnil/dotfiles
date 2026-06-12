@@ -175,7 +175,10 @@ return {
 		})
 		vim.lsp.enable({ "zls" })
 
-    vim.lsp.config("metals", { capabilities = capabilities })
-    vim.lsp.enable({ "metals" })
+		vim.lsp.config("metals", { capabilities = capabilities })
+		vim.lsp.enable({ "metals" })
+
+		vim.lsp.config("clojure_lsp", { capabilities = capabilities })
+		vim.lsp.enable({ "clojure_lsp" })
 	end,
 }

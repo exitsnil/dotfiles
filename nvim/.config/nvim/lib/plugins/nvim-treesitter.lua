@@ -53,9 +53,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-  config = function()
-    local nvim_treesitter = require("nvim-treesitter")
-    nvim_treesitter.install({
+	config = function()
+		local nvim_treesitter = require("nvim-treesitter")
+		nvim_treesitter.install({
 			"asm",
 			"awk",
 			"bash",
@@ -97,7 +97,7 @@ return {
 			"python",
 			"ruby",
 			"rust",
-      "scala",
+			"scala",
 			"scheme",
 			"sql",
 			"ssh_config",
@@ -106,14 +106,14 @@ return {
 			"typescript",
 			"vim",
 			"yaml",
-    })
+		})
 
-    vim.api.nvim_create_autocmd("FileType", {
-      callback = function(args)
-        pcall(vim.treesitter.start, args.buf)
-      end
-    })
-  end
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function(args)
+				pcall(vim.treesitter.start, args.buf)
+			end,
+		})
+	end,
 	-- opts = {
 	-- 	ensure_installed = {
 	-- 		"asm",
@@ -157,7 +157,7 @@ return {
 	-- 		"python",
 	-- 		"ruby",
 	-- 		"rust",
-      -- "scala",
+	-- "scala",
 	-- 		"scheme",
 	-- 		"sql",
 	-- 		"ssh_config",
