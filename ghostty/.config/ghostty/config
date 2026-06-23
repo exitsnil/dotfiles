@@ -4,5 +4,5 @@ cursor-style = block
 cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
-font-family = Lilex
+font-family = Noto Sans Mono
 theme = TokyoNight Night
