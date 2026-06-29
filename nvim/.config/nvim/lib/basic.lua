@@ -19,6 +19,10 @@ vim.cmd("colorscheme tokyonight-night")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
+-- for nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 -- vim.cmd("highlight NormalFloat guibg=#1c1c1c")
 

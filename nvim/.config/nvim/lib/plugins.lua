@@ -51,6 +51,8 @@ lazy.setup({
 		require("plugins.gitsigns-nvim"),
 		require("plugins.vim-dadbod"),
 		require("plugins.nvim-jdtls"),
+		require("plugins.oil"),
+		require("plugins.nvim-tree"),
 		require("plugins.tokyonight"),
 	},
 })
