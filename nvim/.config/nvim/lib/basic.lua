@@ -15,7 +15,7 @@ vim.opt.signcolumn = "no"
 vim.opt.nu = true
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme cursor-dark")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
@@ -23,7 +23,7 @@ vim.opt.cursorlineopt = "number"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 -- vim.cmd("highlight NormalFloat guibg=#1c1c1c")
 
 -- primarily used for navigating through kernel source tree
