@@ -24,7 +24,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NormalFloat guibg=#NONE ctermbg=NONE")
+vim.cmd("highlight NormalFloat guibg=NONE ctermbg=NONE")
 
 -- primarily used for navigating through kernel source tree
 vim.opt.tags = "./tags;,tags"
