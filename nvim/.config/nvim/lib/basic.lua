@@ -13,9 +13,9 @@ vim.opt.smartindent = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.signcolumn = "no"
 vim.opt.nu = true
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
-vim.cmd("colorscheme cursor-dark")
+-- vim.opt.termguicolors = true
+-- vim.opt.background = "dark"
+vim.cmd("colorscheme default")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
@@ -24,7 +24,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
--- vim.cmd("highlight NormalFloat guibg=#1c1c1c")
+vim.cmd("highlight NormalFloat guibg=#NONE ctermbg=NONE")
 
 -- primarily used for navigating through kernel source tree
 vim.opt.tags = "./tags;,tags"

@@ -53,7 +53,5 @@ lazy.setup({
 		require("plugins.nvim-jdtls"),
 		require("plugins.oil"),
 		require("plugins.nvim-tree"),
-		require("plugins.tokyonight"),
-		require("plugins.cursor-dark"),
 	},
 })
