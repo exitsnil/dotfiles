@@ -4,5 +4,5 @@ cursor-style = block
 cursor-style-blink = true
 mouse-hide-while-typing = true
 link-url = true
-theme = Apple System Colors Light
+theme = TokyoNight Night
 font-family = Menlo
