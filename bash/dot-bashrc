@@ -24,9 +24,6 @@ eval "$(pyenv init -)"
 
 export GPG_TTY=$(tty)
 
-# set up deno
-test -s ~/.deno/env && . ~/.deno/env || true
-
 # set up emscripten sdk
 export EMSDK_QUIET=1
 test -s ~/Source/emsdk/emsdk_env.sh && . ~/Source/emsdk/emsdk_env.sh || true
