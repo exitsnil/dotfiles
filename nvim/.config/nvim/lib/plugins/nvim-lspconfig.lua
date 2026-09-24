@@ -114,23 +114,10 @@ return {
 			})
 		end
 
-		-- need to install tsserver and typescript-language-server globally
-		-- bun install -g tsserver typescript-language-server
-		vim.lsp.config("ts_ls", {
-			on_attach = function(client, bufnr)
-				client.resolved_capabilities.document_formatting = false
-				client.resolved_capabilities.document_range_formatting = false
-				local ts_utils = require("nvim-lsp-ts-utils")
-				ts_utils.setup({})
-				ts_utils.setup_client(client)
-				buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
-				buf_map(bufnr, "n", "gi", ":TSLspRenameFile<CR>")
-				buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
-				-- on_attach(client, bufnr)
-			end,
-			root_dir = util.root_pattern("package.json"),
+		vim.lsp.config("tsc", {
+      capabilities = capabilities
 		})
-		vim.lsp.enable({ "ts_ls" })
+		vim.lsp.enable("tsc")
 
 		vim.lsp.config("rust_analyzer", {
 			capabilities = capabilities,
