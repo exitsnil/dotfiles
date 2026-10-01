@@ -161,5 +161,7 @@ return {
 
 		vim.lsp.config("clojure_lsp", { capabilities = capabilities })
 		vim.lsp.enable({ "clojure_lsp" })
+
+    vim.lsp.enable("perlnavigator")
 	end,
 }
