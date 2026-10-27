@@ -50,3 +50,7 @@ zed/.config/zed/themes/
 # opencode config
 opencode/.config/opencode/*
 !opencode/.config/opencode/opencode.json
+
+# pi coding agent
+pi/.pi/agent/*
+!pi/.pi/agent/settings.json
