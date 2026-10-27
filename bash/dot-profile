@@ -19,3 +19,7 @@ eval "$(luarocks path --no-bin)"
 
 . "$HOME/.cargo/env"
 
+# check if we are using rex and add to path
+if [ -n "$REX_BIN_DIR" ]; then
+  export PATH="$REX_BIN_DIR:$PATH"
+fi
