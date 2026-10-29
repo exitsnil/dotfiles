@@ -1,39 +1,39 @@
-;; bootstrap straight.el
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name
-        "straight/repos/straight.el/bootstrap.el"
-        (or (bound-and-true-p straight-base-dir)
-            user-emacs-directory)))
-      (bootstrap-version 7))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
+;; bootstrap packages
+(require 'package)
+(setq package-archives
+  '(("gnu" . "https://elpa.gnu.org/packages/")
+    ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+    ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
 
-;; package list
-;; (straight-use-package 'evil)
-(straight-use-package 'ivy)
-(straight-use-package 'dash)
-(straight-use-package 'cider)
-(straight-use-package 'company)
-(straight-use-package 'flycheck)
-(straight-use-package 'go-mode)
-(straight-use-package 'lua-mode)
-(straight-use-package 'clojure-mode)
-(straight-use-package 'geiser)
-(straight-use-package 'geiser-guile)
-(straight-use-package 'doom-modeline)
-(straight-use-package 'dap-mode)
-(straight-use-package 'magit)
-(straight-use-package 'paredit)
-(straight-use-package 'typescript-mode)
-(straight-use-package 'scala-mode)
-(straight-use-package 'sbt-mode)
+;; refresh package contents if necessary
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; define list of packages used by Emacs
+(defvar my-packages
+  '(ivy
+    dash
+    cider
+    company
+    flycheck
+    go-mode
+    lua-mode
+    clojure-mode
+    geiser
+    geiser-guile
+    doom-modeline
+    dap-mode
+    magit
+    paredit
+    typescript-mode
+    scala-mode
+    sbt-mode))
+
+;; install any missing packages
+(dolist (pkg my-packages)
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 ;; core configuration
 (setq auto-save-default nil)
@@ -117,7 +117,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages
+   '(cider company dap-mode dash doom-modeline flycheck geiser
+	   geiser-guile go-mode ivy magit paredit sbt-mode scala-mode
+	   typescript-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
