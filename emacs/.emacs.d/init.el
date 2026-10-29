@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t; -*-
+
 ;; bootstrap packages
 (require 'package)
 (setq package-archives
@@ -50,7 +52,7 @@
 (setq resize-mini-windows nil)
 (setq eldoc-echo-area-use-multiline-p t)
 ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
-(load-theme 'modus-operandi :no-confirm)
+(load-theme 'modus-vivendi :no-confirm)
 (pixel-scroll-precision-mode 1)
 (setq mac-option-modifier 'meta
       mac-command-modifier 'super)
