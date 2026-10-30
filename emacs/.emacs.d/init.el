@@ -30,7 +30,8 @@
     paredit
     typescript-mode
     scala-mode
-    sbt-mode))
+    sbt-mode
+    exec-path-from-shell))
 
 ;; install any missing packages
 (dolist (pkg my-packages)
@@ -110,9 +111,16 @@
 (add-hook 'scala-mode-hook 'eglot-ensure)
 ;; java
 (add-hook 'java-mode-hook 'eglot-ensure)
+;; perl
+(add-hook 'perl-mode-hook 'eglot-ensure)
+(add-hook 'cperl-mode-hook 'eglot-ensure)
 
 ;; notmuch
 ;; (require 'notmuch)
+
+;; setup $PATH and $MANPATH
+(when (memq window-system '(mac ns x pgtk))
+  (exec-path-from-shell-initialize))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -121,9 +129,9 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(cider company dap-mode dash doom-modeline flycheck geiser
-	   geiser-guile go-mode ivy magit paredit sbt-mode scala-mode
-	   typescript-mode)))
+   '(cider company dap-mode dash doom-modeline exec-path-from-shell
+	   flycheck geiser geiser-guile go-mode ivy magit paredit
+	   sbt-mode scala-mode typescript-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
