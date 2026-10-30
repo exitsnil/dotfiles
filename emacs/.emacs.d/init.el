@@ -24,7 +24,6 @@
     clojure-mode
     geiser
     geiser-guile
-    doom-modeline
     dap-mode
     magit
     paredit
@@ -65,11 +64,6 @@
 
 ;; org-mode
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
-
-;; doom-modeline
-(require 'doom-modeline)
-(setq doom-modeline-icon nil)
-(doom-modeline-mode 1)
 
 ;; company-mode
 (global-company-mode)
