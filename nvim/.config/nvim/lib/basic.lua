@@ -15,7 +15,7 @@ vim.opt.signcolumn = "no"
 vim.opt.nu = true
 -- vim.opt.termguicolors = true
 -- vim.opt.background = "dark"
-vim.cmd.colorscheme("cursor-dark")
+vim.cmd.colorscheme("modus")
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
