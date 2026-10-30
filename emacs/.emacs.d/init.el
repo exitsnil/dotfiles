@@ -112,6 +112,10 @@
 ;; java
 (add-hook 'java-mode-hook 'eglot-ensure)
 ;; perl
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               `((perl-mode cperl-mode) . ("perlnavigator" "--stdio"))))
+
 (add-hook 'perl-mode-hook 'eglot-ensure)
 (add-hook 'cperl-mode-hook 'eglot-ensure)
 
