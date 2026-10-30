@@ -42,7 +42,7 @@
 (setq auto-save-default nil)
 
 ;; GUI stuff
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 (tool-bar-mode -1)
 (setq make-backup-files nil)
 (set-frame-font "JetBrains Mono 13" nil t)
@@ -57,6 +57,8 @@
 (pixel-scroll-precision-mode 1)
 (setq mac-option-modifier 'meta
       mac-command-modifier 'super)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode 1)
 
 ;; evil-mode
 ;; (evil-mode)
