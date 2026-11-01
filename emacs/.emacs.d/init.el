@@ -24,6 +24,7 @@
     clojure-mode
     geiser
     geiser-guile
+    geiser-chicken
     dap-mode
     magit
     paredit
@@ -61,6 +62,9 @@
 
 ;; evil-mode
 ;; (evil-mode)
+
+;; geiser-mode
+(setq geiser-mode-start-repl-p t)
 
 ;; org-mode
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
@@ -130,8 +134,8 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    '(cider company dap-mode dash doom-modeline exec-path-from-shell
-	   flycheck geiser geiser-guile go-mode ivy magit paredit
-	   sbt-mode scala-mode typescript-mode)))
+	   flycheck geiser geiser-chicken geiser-guile go-mode ivy
+	   magit paredit sbt-mode scala-mode typescript-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
