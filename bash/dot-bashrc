@@ -14,14 +14,6 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/lib/pkgconfig"
 test -s ~/.alias && . ~/.alias || true
 test -s ~/.profile && . ~/.profile || true
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
-
 export GPG_TTY=$(tty)
 
 # set up emscripten sdk
@@ -31,9 +23,6 @@ test -s ~/Source/emsdk/emsdk_env.sh && . ~/Source/emsdk/emsdk_env.sh || true
 # set up ocaml
 eval $(opam env)
 
-# setup rbenv
-eval "$(rbenv init - --no-rehash bash)"
-
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
@@ -41,7 +30,7 @@ alias grep='grep --color=auto'
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 [[ -r "$HOME/.grok/completions/bash/grok.bash" ]] && source "$HOME/.grok/completions/bash/grok.bash"
 
-source ~/.local/share/bash-completion/completions/poetry.bash
+[[ -r "$HOME/.local/share/bash-completion/completions/poetry.bash" ]] && source $HOME/.local/share/bash-completion/completions/poetry.bash
 
 # perl stuff
 PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -52,3 +41,6 @@ eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# setup mise
+eval "$(/Users/adam/.local/bin/mise activate bash)"
