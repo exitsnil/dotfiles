@@ -118,6 +118,7 @@
 
 (add-hook 'perl-mode-hook 'eglot-ensure)
 (add-hook 'cperl-mode-hook 'eglot-ensure)
+(add-hook 'python-mode-hook 'eglot-ensure)
 
 ;; notmuch
 ;; (require 'notmuch)
