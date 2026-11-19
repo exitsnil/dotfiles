@@ -102,6 +102,8 @@
 (add-hook 'c-mode-hook 'eglot-ensure) ; clangd
 ;; cpp
 (add-hook 'c++-mode-hook 'eglot-ensure) ; clangd
+;; obj-c
+(add-hook 'objc-mode-hook 'eglot-ensure)
 ;; javascript
 (add-hook 'js-mode-hook 'eglot-ensure) ; typescript-language-server
 ;; typescript

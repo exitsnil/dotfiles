@@ -44,3 +44,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # setup mise
 eval "$(/Users/adam/.local/bin/mise activate bash)"
+
+# setup perlbrew
+source ~/perl5/perlbrew/etc/bashrc
